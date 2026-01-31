@@ -17,7 +17,6 @@ export default function LoginPage() {
     const correo = form.correo.value.trim();
     const password = form.password.value.trim();
 
-    // VALIDACIÓN
     if (!ci || !correo || !password) {
       setError("Todos los campos son obligatorios");
       return;
@@ -38,8 +37,8 @@ export default function LoginPage() {
 
   return (
     <div className="container-fluid vh-100 bg-light">
-      <div className="row h-100 align-items-center">
-        <div className="col-11 col-sm-8 col-md-4 ms-md-5">
+      <div className="row h-100 align-items-center justify-content-center">
+        <div className="col-11 col-sm-8 col-md-4">
           <LoginForm onSubmit={validarSesion} error={error} />
         </div>
       </div>
