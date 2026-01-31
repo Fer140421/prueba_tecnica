@@ -1,4 +1,3 @@
-import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -9,11 +8,6 @@ export default function NotFound() {
         <p className="text-muted mb-4">
           Lo sentimos, la página que buscas no existe.
         </p>
-
-        <Link href="/" className="btn btn-primary btn-lg">
-          <i className="bi bi-house-door me-2"></i>
-          Volver al inicio
-        </Link>
       </div>
     </div>
   );

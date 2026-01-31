@@ -1,59 +1,56 @@
 "use client";
 
-export default function LoginForm({ onSubmit }) {
+export default function LoginForm({ onSubmit, error }) {
   return (
-    <div className="card bg-dark border-primary shadow-lg">
+    <div className="card border-primary">
       <div className="card-body p-4">
-        <div className="text-center mb-4">
-          <h3 className="text-white fw-bold">Bienvenido</h3>
-        </div>
-        
+
+        <h4 className="text-center text-primary mb-4">
+          Inicio de sesión
+        </h4>
+
+        {error && (
+          <div className="alert alert-danger py-2">
+            {error}
+          </div>
+        )}
+
         <form onSubmit={onSubmit}>
           <div className="mb-3">
-            <label className="form-label text-white fw-bold">
-              <i className="bi bi-person-badge me-2 text-primary"></i>CI
-            </label>
-            <input 
-              type="text" 
-              id="ci" 
-              className="form-control bg-dark text-white border-primary" 
-              placeholder="Ingresa tu CI"
-              required
+            <label className="form-label">CI</label>
+            <input
+              type="text"
+              name="ci"
+              className="form-control"
+              placeholder="Ingrese su CI"
             />
           </div>
 
           <div className="mb-3">
-            <label className="form-label text-white fw-bold">
-              <i className="bi bi-envelope me-2 text-primary"></i>Correo
-            </label>
-            <input 
-              type="email" 
-              id="correo" 
-              className="form-control bg-dark text-white border-primary" 
-              placeholder="ejemplo@correo.com"
-              required
+            <label className="form-label">Correo</label>
+            <input
+              type="email"
+              name="correo"
+              className="form-control"
+              placeholder="correo@ejemplo.com"
             />
           </div>
 
-          <div className="mb-3">
-            <label className="form-label text-white fw-bold">
-              <i className="bi bi-lock me-2 text-primary"></i>Contraseña
-            </label>
-            <input 
-              type="password" 
-              id="password" 
-              className="form-control bg-dark text-white border-primary" 
-              placeholder="••••••••"
-              required
+          <div className="mb-4">
+            <label className="form-label">Contraseña</label>
+            <input
+              type="password"
+              name="password"
+              className="form-control"
+              placeholder="Ingrese su contraseña"
             />
           </div>
 
-          <button className="btn btn-primary w-100 mt-3 py-2 fw-bold">
-            <i className="bi bi-box-arrow-in-right me-2"></i>
+          <button className="btn btn-primary w-100">
             Iniciar sesión
           </button>
-    
         </form>
+
       </div>
     </div>
   );

@@ -3,14 +3,14 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-primary">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
       <div className="container-fluid">
         <div className="navbar-nav mx-auto">
-          <Link className="nav-link text-white fw-bold px-4" href="/home">
+          <Link className="nav-link text-white fw-bold px-4" href="/menu">
             <i className="bi bi-house-door me-2"></i>
             Home
           </Link>
-          <Link className="nav-link text-white fw-bold px-4" href="/about">
+          <Link className="nav-link text-white fw-bold px-4" href="/menu/about">
             <i className="bi bi-info-circle me-2"></i>
             About
           </Link>

@@ -1,13 +1,7 @@
-import Navbar from "@/components/Navbar";
-import React from "react";
-
-export default function page() {
+export default function MenuPage() {
   return (
-    <div>
-      <Navbar />
-      <main>
-        <h1 className="text-center mt-4">Bienvenido al menu principal</h1>
-      </main>
-    </div>
+    <h1 className="text-center mt-4">
+      Bienvenido al menú principal
+    </h1>
   );
 }
